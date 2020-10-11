@@ -64,4 +64,10 @@ sealed trait IntList
 case object End extends IntList
 final case class Pair(head: Int, tail: IntList) extends IntList
 
+val userIdList = List(1, 2, 3)
+case class User(id: Int, firstname: String, lastname: String)
 
+val user1 = new User(1, "ab", "jj")
+val userList = userIdList.map(id => new User(id, "ab", "jle"))
+
+userList.map(u => println(u))
